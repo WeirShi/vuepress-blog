@@ -20,6 +20,7 @@ function debounce(fn, interval = 300) {
 
 ### 节流
 一个事件一直不断的触发时，只有当前时间与上一次执行的时间在一个设定时间才会再次执行该事件
+```
 // 间隔时间，默认300ms
 function throttle(fn, interval = 300) {
   // 节流函数进入的时间
@@ -36,3 +37,4 @@ function throttle(fn, interval = 300) {
     }
   }
 }
+```
