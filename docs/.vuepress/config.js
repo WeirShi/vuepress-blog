@@ -35,9 +35,12 @@ module.exports = {
           children: [
             ['/base/operator.md', '常用运算符'],
             ['/base/datatype.md', '数据类型'],
+            ['/base/type-conversion.md', '类型转换'],
             ['/base/this.md', 'this指向问题'],
             ['/base/scope.md', '作用域'],
-            ['/base/closure.md', '闭包问题']
+            ['/base/closure.md', '闭包问题'],
+            ['/base/prototype.md', '原型和继承'],
+            ['/base/clone.md', '深浅拷贝'],
           ]
         }
       ],
