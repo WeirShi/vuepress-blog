@@ -2,7 +2,6 @@ module.exports = {
   title: '前端封神之路',
   description: '记录学习的前端知识',
   dest: 'blog',
-  base: '/docs',
   port: '9090',
   // 监听文件，并实时更新
   // extraWatchFiles: {}
