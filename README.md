@@ -1,2 +1,2 @@
-# vitepress-blog
-Blog With VitePress
+# vuepress-blog
+Blog With VuePress
