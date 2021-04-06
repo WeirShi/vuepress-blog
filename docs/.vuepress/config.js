@@ -21,7 +21,8 @@ module.exports = {
       {
         text: '前端',
         items: [
-          { text: 'JS基础', link: '/base/operator.md' }
+          { text: 'JS基础', link: '/base/operator.md' },
+          { text: '手写题', link: '/realize/realize-indexof.md' },
         ]
       },
       { text: '关于我', link: '/about/me.md' },
@@ -46,6 +47,19 @@ module.exports = {
           title: '关于我',
           children: [
             ['/about/me.md', '个人简介']
+          ]
+        }
+      ],
+      '/realize/': [
+        {
+          title: '手写题',
+          children: [
+            ['/realize/realize-indexof.md', '实现indexOf方法'],
+            ['/realize/realize-d&t.md', '实现防抖和节流'],
+            ['/realize/realize-clone.md', '实现深浅拷贝'],
+            ['/realize/realize-new.md', '实现new方法'],
+            ['/realize/realize-ES6Class.md', '实现ES6 Class方法'],
+            ['/realize/realize-promiseAll.md', '实现Promise.all'],
           ]
         }
       ]
