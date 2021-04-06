@@ -7,7 +7,10 @@ module.exports = {
   // extraWatchFiles: {}
   serviceWorker: true,
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    //增加manifest.json
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicon.ico' }],
   ],
   themeConfig: {
     smoothScroll: true, // 页面滚动
