@@ -1,8 +1,6 @@
 ---
-# layout: Home
 home: true
 lang: zh-CN
-# heroText: WeirShi的技术博客
 heroImage: /assets/images/avatar.jpeg
 tagline: 我只是一个菜鸡小前端
 actionText: 马上开始 →
