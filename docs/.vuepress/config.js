@@ -1,0 +1,55 @@
+module.exports = {
+  title: '前端封神之路',
+  description: '记录学习的前端知识',
+  dest: 'blog',
+  base: '/docs',
+  port: '9090',
+  // 监听文件，并实时更新
+  // extraWatchFiles: {}
+  serviceWorker: true,
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
+  themeConfig: {
+    smoothScroll: true, // 页面滚动
+    lastUpdated: 'Last Updated', // string | boolean
+    search: false, //搜索
+    searchMaxSuggestions: 10,
+    // 顶部导航
+    nav: [
+      { text: '首页', link: '/' },
+      {
+        text: '前端',
+        items: [
+          { text: 'JS基础', link: '/base/operator.md' }
+        ]
+      },
+      { text: '关于我', link: '/about/me.md' },
+      { text: 'Github', link: 'https://github.com/WeirShi/vuepress-blog' }
+    ],
+    // 侧边栏
+    sidebar: {
+      '/base/': [
+        {
+          title: 'JS基础',
+          children: [
+            ['/base/operator.md', '常用运算符'],
+            ['/base/datatype.md', '数据类型'],
+            ['/base/this.md', 'this指向问题'],
+            ['/base/scope.md', '作用域'],
+            ['/base/closure.md', '闭包问题']
+          ]
+        }
+      ],
+      '/about/': [
+        {
+          title: '关于我',
+          children: [
+            ['/about/me.md', '个人简介']
+          ]
+        }
+      ]
+    },
+    sidebarDepth: 2, // 默认 1 提取到 h2，0 为禁用，2 为 h2，h3
+  }
+}
