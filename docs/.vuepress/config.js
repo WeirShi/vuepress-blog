@@ -25,6 +25,16 @@ module.exports = {
         items: [
           { text: 'JS基础', link: '/base/operator.md' },
           { text: '手写题', link: '/realize/realize-indexof.md' },
+          { text: '面试问题', link: '/interview/variable.md' },
+        ]
+      },
+      {
+        text: '框架源码解读',
+        items: [
+          {text: 'JQuery', link: ''},
+          {text: 'Vue', link: ''},
+          {text: 'React', link: ''},
+          {text: 'Webpack', link: ''}
         ]
       },
       { text: '关于我', link: '/about/me.md' },
@@ -65,6 +75,14 @@ module.exports = {
             ['/realize/realize-new.md', '实现new方法'],
             ['/realize/realize-ES6Class.md', '实现ES6 Class方法'],
             ['/realize/realize-promiseAll.md', '实现Promise.all'],
+          ]
+        }
+      ],
+      '/interview/': [
+        {
+          title: '面试遇到过的问题',
+          children: [
+            ['/interview/variable.md', 'var、const、let']
           ]
         }
       ]
