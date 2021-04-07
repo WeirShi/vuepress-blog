@@ -1,0 +1,15 @@
+{
+  "name": "vuepress-blog",
+  "short_name": "blog",
+  "icons": [
+    {
+      "src": "/icons/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#3eaf7c"
+}
