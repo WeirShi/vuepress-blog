@@ -26,6 +26,7 @@ module.exports = {
           { text: 'JS基础', link: '/base/operator.md' },
           { text: '手写题', link: '/realize/realize-indexof.md' },
           { text: '面试问题', link: '/interview/variable.md' },
+          { text: 'http协议', link: '/http/http.md' },
         ]
       },
       // {
@@ -85,6 +86,14 @@ module.exports = {
           children: [
             ['/interview/variable.md', 'var、const、let'],
             ['/interview/Object.prototype.toString.md', 'Object.prototype.toString'],
+          ]
+        }
+      ],
+      '/http/': [
+        {
+          title: '前端需要知道的http协议',
+          children: [
+            ['/http/http.md', 'http协议']
           ]
         }
       ]
