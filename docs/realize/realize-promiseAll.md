@@ -8,6 +8,11 @@
   3. 执行每一个Promise实例，获取resolve的value，并组成一个数组Arr，作为新创建Promise实例的reslove的对象，如果其中有不合法的错误或者reject, Promise实例会立即抛出第一个错误
 
 ```
+function isPromise(obj) {
+  return Object.prototype.toString.call(obj).slice(8, -1) === 'Promise';
+}
+
+
 function myPromiseAll(list) {
   // 数组类型检查
   if (!Array.isArray(arr)) {
@@ -18,7 +23,7 @@ function myPromiseAll(list) {
       let result = []
       for (let item of arr) {
         // 检查实例是否为Promises实例
-        if (Object.prototype.toString.call(item).slice(8, -1) === "Promise") {
+        if (!isPromise(item)) {
             // 没有的话返回当前值（为了保证按顺序执行，自己封装一个Promise实例）
             item = new Promise(function (reslove, reject) {
               reslove(item)

@@ -82,7 +82,8 @@ module.exports = {
         {
           title: '面试遇到过的问题',
           children: [
-            ['/interview/variable.md', 'var、const、let']
+            ['/interview/variable.md', 'var、const、let'],
+            ['/interview/Object.prototype.toString.md', 'Object.prototype.toString'],
           ]
         }
       ]
