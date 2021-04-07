@@ -86,6 +86,7 @@ module.exports = {
           children: [
             ['/interview/variable.md', 'var、const、let'],
             ['/interview/Object.prototype.toString.md', 'Object.prototype.toString'],
+            ['/interview/decimals.md', '0.1+0.2!==0.3'],
           ]
         }
       ],
