@@ -28,17 +28,18 @@ module.exports = {
           { text: '面试问题', link: '/interview/variable.md' },
         ]
       },
-      {
-        text: '框架源码解读',
-        items: [
-          {text: 'JQuery', link: ''},
-          {text: 'Vue', link: ''},
-          {text: 'React', link: ''},
-          {text: 'Webpack', link: ''}
-        ]
-      },
+      // {
+      //   text: '框架源码解读',
+      //   items: [
+      //     {text: 'JQuery', link: ''},
+      //     {text: 'Vue', link: ''},
+      //     {text: 'React', link: ''},
+      //     {text: 'Webpack', link: ''}
+      //   ]
+      // },
       { text: '关于我', link: '/about/me.md' },
-      { text: 'Github', link: 'https://github.com/WeirShi/vuepress-blog' }
+      { text: 'Github', link: 'https://github.com/WeirShi/vuepress-blog' },
+      { text: '苏ICP备19022770号-1', link: 'https://beian.miit.gov.cn/#/Integrated/index'}
     ],
     // 侧边栏
     sidebar: {

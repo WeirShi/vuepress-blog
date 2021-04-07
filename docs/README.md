@@ -2,7 +2,7 @@
 home: true
 lang: zh-CN
 heroImage: /assets/images/avatar.jpeg
-tagline: 我只是一个菜鸡小前端
+tagline: 我只是一个菜鸡野生小前端
 actionText: 马上开始 →
 actionLink: /base/operator.md
 features:
@@ -12,5 +12,8 @@ features:
   details: HTML、CSS、JS、Node、React、Vue、Webpack、Vite等
 - title: 进阶
   details: 从JS基础内容到全栈开发到框架源码解析，一步一步走上前端封神之路  #苏ICP备19022770号-1
-footer: MIT Licensed | Copyright © 2018-present Weir Shi 
+footer: MIT Licensed | Copyright © 2018 - Weir Shi | 
 ---
+
+
+[苏ICP备19022770号-1](https://beian.miit.gov.cn/#/Integrated/index)
