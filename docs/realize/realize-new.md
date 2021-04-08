@@ -4,7 +4,8 @@
 - 最后返回 `this` 指向的新对象，也就是实例（如果没有手动返回其他的对象）
 
 实现方法
-```
+## code
+```javascript
 function myNew(Parent, ...args) {
   // 创建一个空对象，基础父级的原型
   let obj = Object.create(Parent.prototype)

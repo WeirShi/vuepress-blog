@@ -2,7 +2,8 @@
 
 ## 全局作用域和局部作用域
 
-```
+## code
+```javascript
 var a = 1
 function fn() {
   var b = 2
@@ -15,7 +16,8 @@ console.log('b', b) // 报错 b in not defined
 
 ## 作用域链
 上文中其实已经提到了部分作用域链，局部作用域包含在了全局作用域中(有点像洋葱模型)，函数作用域可以访问到全局作用域的变量，反之不可以，但是相邻的函数作用域之间是不可以互相访问内部变量的
-```
+## code
+```javascript
 var a = 1
 function fn() {
   var b = 2

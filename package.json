@@ -12,6 +12,7 @@
     "deploy": "bash deploy.sh"
   },
   "devDependencies": {
+    "highlight.js": "^10.7.2",
     "vuepress": "^1.8.2"
   }
 }

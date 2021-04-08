@@ -12,7 +12,8 @@ Number、String、Boolean、Null、Undefined、Object、Symbol、BigInt
     - BigInt 可以表示任意大的整数
       `BigInt(value)` 也可以是用 在一个整数后面加n的方式定义一个BigInt, 比如: 10n
     - BigInt 和 Number 不是严格相等的，但是宽松相等的。
-      ```
+      ## code
+      ```javascript
         10n === 10 // false
         10n == 10  // true
       ```
@@ -21,7 +22,8 @@ Number、String、Boolean、Null、Undefined、Object、Symbol、BigInt
 
 - 如何判断数据类型
   1. typeof
-  ```
+  ## code
+  ```javascript
     typeof 1                // "number"
     typeof "1"              // "string"
     typeof []               // "object"
@@ -35,7 +37,8 @@ Number、String、Boolean、Null、Undefined、Object、Symbol、BigInt
   ```
 
   2. Object.prototype.toString.call
-  ```
+  ## code
+  ```javascript
     const isType = value => {
       return Object.prototype.toString.call(value).slice(8, -1)
     }

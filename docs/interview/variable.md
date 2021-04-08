@@ -1,11 +1,13 @@
 ## var、let、const的区别
 浏览器遇到var声明的变量时，会进行变量提升的情况，
-```
+## code
+```javascript
 console.log(a) // 打印undefined
 var a = 1
 ```
 这里可以看出，变量a还没有被声明就已经可以访问这个变量，只是这个变量还没有被赋值，这种情况，可以看作
-```
+## code
+```javascript
 var a
 console.log(a) // 打印undefined
 a = 1
@@ -13,11 +15,13 @@ a = 1
 变量会声明提前，函数也一样
 
 如果使用`let`和`const`
-```
+## code
+```javascript
 console.log(a)
 let a = 1;
 ```
-```
+## code
+```javascript
 console.log(b)
 const b = 1;
 ```
@@ -35,7 +39,8 @@ ES6中声明变量的方式新增了let和const关键字，这2种方式都会�
 
 在ES5之前，作用域只被分为了函数作用域和全局作用域
 有时候如果想在函数内添加一些临时的变量，我们会将局部代码封装到IIFE(自执行函数)中
-```
+## code
+```javascript
 function fn() {
   fn(a, b)
   (function fn(a, b) {
@@ -47,7 +52,8 @@ function fn() {
 }
 ```
 有了块级作用域后，上面的代码就不需要进行封装
-```
+## code
+```javascript
 function fn() {
   let a, b
   {

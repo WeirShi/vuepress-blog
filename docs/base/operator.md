@@ -10,7 +10,8 @@
 |   %    | 取余   |
 
 ## 一元运算符
-```
+## code
+```javascript
 var a = 1;
 a++  // 返回1   先返回表达式结果, 后自增1
 ++a  // 返回2  先自增1, 后返回表达式结果
@@ -21,7 +22,8 @@ a-- // 1
 ```
 
 ## 逻辑运算符
-```
+## code
+```javascript
   1. &&
     - 与逻辑  a&&b 只有当a为true，b也为true时，该表达式返回true
     - 在js中如果当a为false时，该表达式会直接返回false，不会再去检查b是否为true
@@ -46,7 +48,8 @@ a-- // 1
 |  a ? b : c   | 三元运算符  |
 
 ## 赋值运算符
-```
+## code
+```javascript
   var a = 1;
   a += 5 (a = a + 5) // 6
   a -= 5 (a = a - 5) // -4
@@ -80,13 +83,15 @@ a-- // 1
 ## 非空运算符 ??
 
 如果第一个参数不是null或者undefined (只有这2个)，返回第一个参数，否则返回第二个参数    
-```
+## code
+```javascript
 null ?? 5  // => 5
 3 ?? 5  // => 3
 ```
 
 以前我们给变量值设置默认值时，都会用 ||
-```
+## code
+```javascript
 var a = b || 0  // 如果b为false时，则a默认赋值为0
 ```
 这里b可以为null、undefined、''(空字符串)、boolean(false)、NaN、0   
@@ -94,7 +99,8 @@ var a = b || 0  // 如果b为false时，则a默认赋值为0
 
 ## 空赋值运算符 ??=
 当第一个参数为null或者undefined时赋值运算才会生效(与上文相关)
-```
+## code
+```javascript
 var a = null
 var b = 5
 
@@ -105,18 +111,21 @@ console.log('a',a = a ??= b) // 'a' 5
 ## ?. Optional Chain 链判断运算符
 ES11中新增的语法，比如: 
 之前我们在获取一个对象中可能嵌套对象的属性时，经常会这样写
-```
+## code
+```javascript
 var a = {}
 console.log(a.b.c) // Uncaught TypeError: Cannot read property 'c' of undefined
 ```
 不注意的话，这里就会报错，debug的时候我们就需要这样改
-```
+## code
+```javascript
 console.log(a.b !== undefined ? a.b.c : 0)
 ```
 需要对a对象中的b对象进行undefined的判断(三元表达式)  
 
 ES11提出了`?.`运算符后，就可以简化为
-```
+## code
+```javascript
 var a = {}
 console.log(a.b?.c)
 ```

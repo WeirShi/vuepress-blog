@@ -1,6 +1,7 @@
 #### 实现string.indexOf
 
-```
+## code
+```javascript
 function myIndexOf(target, str) {
   const type = typeof str;
   if (type === "symbol") {

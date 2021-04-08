@@ -7,7 +7,8 @@
   2. 检查传入的每一项是否为Promise实例，如果不是，创建一个新的Promise实例
   3. 执行每一个Promise实例，获取resolve的value，并组成一个数组Arr，作为新创建Promise实例的reslove的对象，如果其中有不合法的错误或者reject, Promise实例会立即抛出第一个错误
 
-```
+## code
+```javascript
 function isPromise(obj) {
   return Object.prototype.toString.call(obj).slice(8, -1) === 'Promise';
 }
