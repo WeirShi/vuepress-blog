@@ -15,7 +15,7 @@ this问题在很多面试中都会被提到，那到底什么是this，如何去
 
 ## 举例说明
 1. 全局环境(浏览器环境)
-## code
+
 ```javascript
 // 非严格模式
 function a () {
@@ -66,7 +66,7 @@ f.fn() // 1
 2. 执行上下文
  - 上文中最后一个例子其实就是执行上下文中的this
  - 存在嵌套关系时，也要查看调用的上下文
-## code
+
 ```javascript
 var a = {
   name: 'Tom',
@@ -87,7 +87,7 @@ console.log(a.b.fn()) // 'Jerry'
 ```
 
 - 复杂情况
-## code
+
 ```javascript
 const o1 = {
   text: 'o1',
@@ -132,7 +132,7 @@ console.log(o3.fn())
 
 4. 构造函数中的this
 根据之前讲的规则中，一般情况下构造函数中的this指向的都会是这个构造函数，比如
-## code
+
 ```javascript
 var Fn = function() {
   this.name = 'Tom'
@@ -143,7 +143,7 @@ console.log(instance.name) // 'Tom'
 PS: 这里会问到new操作符做了什么事情？如何手写一个new方法？
 
 另外构造函数中this的指向还会存在一种情况，比如
-## code
+
 ```javascript
 var Fn = function() {
   this.name = 'Tom'
@@ -170,7 +170,7 @@ console.log(instance.name) // 'Jerry'
 
 5. 箭头函数中的this
 在箭头函数中，this的指向都是由函数的作用域来决定的(箭头函数中的this是继承而来)
-## code
+
 ```javascript
 var a = {
   fn: function () {

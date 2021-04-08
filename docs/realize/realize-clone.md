@@ -1,6 +1,6 @@
 ### 浅拷贝
 只遍历第一层
-## code
+
 ```javascript
 function shadowClone(obj) {
   let cloneData = Array.isArray(obj) ? [] : {};
@@ -15,7 +15,7 @@ function shadowClone(obj) {
 ### 深拷贝
 
 简单实现，递归
-## code
+
 ```javascript
 function deepClone(obj) {
   // 设置数据类型
@@ -37,7 +37,7 @@ function deepClone(obj) {
 }
 ```
 
-## code
+
 ```javascript
 /* 实现深拷贝函数, 要满足以下要求
  * 1. 支持数组，正则，函数以及JSON支持的数据类型

@@ -1,7 +1,7 @@
 ### 防抖
 触发事件后不立即执行，在一定时间内如果再次触发，重新计时，计时结束后执行事件
 
-## code
+
 ```javascript
 // 间隔时间 默认300ms
 function debounce(fn, interval = 300) {
@@ -21,7 +21,7 @@ function debounce(fn, interval = 300) {
 
 ### 节流
 一个事件一直不断的触发时，只有当前时间与上一次执行的时间在一个设定时间才会再次执行该事件
-## code
+
 ```javascript
 // 间隔时间，默认300ms
 function throttle(fn, interval = 300) {

@@ -28,7 +28,7 @@ var func = function () {}
 ## 继承
 
 1. 原型继承
-## code
+
 ```javascript
 function Parent(){
   this.color = 'red'
@@ -44,7 +44,7 @@ new Child();
 ```
 
 2. 构造函数继承
-## code
+
 ```javascript
 function Parent(name){
   this.name = name;
@@ -62,7 +62,7 @@ new Child();
 ```
 3. 组合继承
 结合原型和构造函数的继承方式
-## code
+
 ```javascript
 function Parent(){
   this.color = 'red'
@@ -79,7 +79,7 @@ new Child();
 ```
 4. 寄生组合继承
 对组合继承进行优化
-## code
+
 ```javascript
 function Parent(){
   this.color = 'red'
@@ -104,7 +104,7 @@ new Child();
 
 5. Class 继承
 ES6中，提出了 `class` 实现类的方式，继承的方式也就变成了 `extends`
-## code
+
 ```javascript
 class Parent {
   constructor(name) {

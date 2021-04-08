@@ -3,7 +3,7 @@
 ES6中提出了class 语法糖来定义类，其本质还是js中的原型prototype，因此用ES5来实现class的功能，也就是prototype的原型继承方法
 
 
-## code
+
 ```javascript
 function Animal(name) {
   this.name = name;
