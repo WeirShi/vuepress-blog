@@ -25,7 +25,7 @@ module.exports = {
         items: [
           { text: 'JS基础', link: '/base/operator.md' },
           { text: '手写题', link: '/realize/realize-indexof.md' },
-          { text: '面试问题', link: '/interview/variable.md' },
+          { text: '面试题', link: '/interview/variable.md' },
           { text: 'http协议', link: '/http/http.md' },
         ]
       },
@@ -56,6 +56,7 @@ module.exports = {
             ['/base/closure.md', '闭包问题'],
             ['/base/prototype.md', '原型和继承'],
             ['/base/clone.md', '深浅拷贝'],
+            ['/base/curry.md', '函数柯里化'],
           ]
         }
       ],
@@ -87,6 +88,9 @@ module.exports = {
             ['/interview/variable.md', 'var、const、let'],
             ['/interview/Object.prototype.toString.md', 'Object.prototype.toString'],
             ['/interview/decimals.md', '0.1+0.2!==0.3'],
+            ['/interview/curry.md', '函数柯里化'],
+            ['/interview/call,apply,bind.md', 'call,apply,bind原理'],
+            ['/interview/clock-swing.md', '45度钟摆来回摆动'],
           ]
         }
       ],
