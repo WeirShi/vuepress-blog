@@ -78,6 +78,7 @@ module.exports = {
             ['/realize/realize-new.md', '实现new方法'],
             ['/realize/realize-ES6Class.md', '实现ES6 Class方法'],
             ['/realize/realize-promiseAll.md', '实现Promise.all'],
+            ['/realize/realize-eventBus.md', '实现Event Bus'],
           ]
         }
       ],
@@ -91,6 +92,7 @@ module.exports = {
             ['/interview/curry.md', '函数柯里化'],
             ['/interview/call,apply,bind.md', 'call,apply,bind原理'],
             ['/interview/clock-swing.md', '45度钟摆来回摆动'],
+            ['/interview/url.md', '用户输入url后，浏览器发生了什么？']
           ]
         }
       ],
