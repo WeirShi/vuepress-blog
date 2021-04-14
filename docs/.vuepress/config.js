@@ -24,6 +24,7 @@ module.exports = {
         text: '前端',
         items: [
           { text: 'JS基础', link: '/base/operator.md' },
+          { text: 'CSS', link: '/css/bfc.md' },
           { text: '手写题', link: '/realize/realize-indexof.md' },
           { text: '面试题', link: '/interview/variable.md' },
           { text: 'http协议', link: '/http/http.md' },
@@ -60,6 +61,15 @@ module.exports = {
           ]
         }
       ],
+      '/css/': [
+        {
+          title: 'CSS',
+          children: [
+            ['/css/bfc.md', '什么是BFC？'],
+            ['/css/flex.md', 'flex弹性布局'],
+          ]
+        }
+      ],
       '/about/': [
         {
           title: '关于我',
@@ -79,6 +89,7 @@ module.exports = {
             ['/realize/realize-ES6Class.md', '实现ES6 Class方法'],
             ['/realize/realize-promiseAll.md', '实现Promise.all'],
             ['/realize/realize-eventBus.md', '实现Event Bus'],
+            ['/realize/realize-instanceof.md', '实现instanceof'],
           ]
         }
       ],
