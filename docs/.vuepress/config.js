@@ -104,6 +104,7 @@ module.exports = {
             ['/realize/realize-promiseAll.md', '实现Promise.all'],
             ['/realize/realize-eventBus.md', '实现Event Bus'],
             ['/realize/realize-instanceof.md', '实现instanceof'],
+            ['/realize/realize-queue.md', '实现并发请求队列'],
           ]
         }
       ],
