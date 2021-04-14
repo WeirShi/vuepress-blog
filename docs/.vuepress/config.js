@@ -21,6 +21,12 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       {
+        text: '日常开发记录',
+        items: [
+          { text: 'JS相关', link: '/daily/js/popstate.md' }
+        ]
+      },
+      {
         text: '前端',
         items: [
           { text: 'JS基础', link: '/base/operator.md' },
@@ -45,6 +51,14 @@ module.exports = {
     ],
     // 侧边栏
     sidebar: {
+      '/daily/': [
+        {
+          title: 'JS相关',
+          children: [
+            ['/daily/js/popstate.md', '监听浏览器返回事件']
+          ]
+        }
+      ],
       '/base/': [
         {
           title: 'JS基础',
