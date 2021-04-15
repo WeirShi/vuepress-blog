@@ -9,7 +9,6 @@ Function.prototype.myCall = function(context = window, ...args) {
   delete context[fn]
   return result
 }
-
 ```
 
 #### apply
@@ -21,7 +20,6 @@ Function.prototype.myApply = function(context = window) {
   delete context[fn]
   return result
 }
-
 ```
 
 #### bind
@@ -38,5 +36,4 @@ Function.prototype.myBind = function (context) {
     return _this.apply(context, args.concat(...arguments))
   }
 }
-
 ```
