@@ -1,4 +1,4 @@
-#### 实现并发请求队列
+### 实现并发请求队列
 
 ```javascript
 function requestQueue(thisArg, limit = 0) {

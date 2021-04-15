@@ -1,4 +1,4 @@
-#### 实现Promise.all
+### 实现Promise.all
 
 - Promise.all 传入的参数是一个 每一项都是Promise对象的数组数据
 - 输出是一个新的Promise实例value（2种情况 reslove一个数组 或reject第一个错误）

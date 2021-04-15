@@ -105,6 +105,7 @@ module.exports = {
             ['/realize/realize-eventBus.md', '实现Event Bus'],
             ['/realize/realize-instanceof.md', '实现instanceof'],
             ['/realize/realize-queue.md', '实现并发请求队列'],
+            ['/realize/realize-call,apply,bind.md', '实现call,apply,bind方法'],
           ]
         }
       ],
@@ -116,7 +117,6 @@ module.exports = {
             ['/interview/Object.prototype.toString.md', 'Object.prototype.toString'],
             ['/interview/decimals.md', '0.1+0.2!==0.3'],
             ['/interview/curry.md', '函数柯里化'],
-            ['/interview/call,apply,bind.md', 'call,apply,bind原理'],
             ['/interview/clock-swing.md', '45度钟摆来回摆动'],
             ['/interview/url.md', '用户输入url后，浏览器发生了什么？']
           ]

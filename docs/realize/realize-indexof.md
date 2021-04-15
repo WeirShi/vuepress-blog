@@ -1,4 +1,4 @@
-#### 实现string.indexOf
+### 实现string.indexOf
 
 
 ```javascript
