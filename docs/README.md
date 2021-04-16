@@ -11,6 +11,6 @@ features:
 - title: 前端
   details: HTML、CSS、JS、Node、React、Vue、Webpack、Vite等
 - title: 进阶
-  details: 从JS基础内容到全栈开发到框架源码解析，一步一步走上前端封神之路  #苏ICP备19022770号-1
-footer: MIT Licensed | Copyright © 2018 - Weir Shi
+  details: 从JS基础内容到全栈开发到框架源码解析，一步一步走上前端封神之路
+footer: MIT Licensed | Copyright © 2021 - Weir Shi
 ---
