@@ -72,6 +72,7 @@ module.exports = {
             ['/base/prototype.md', '原型和继承'],
             ['/base/clone.md', '深浅拷贝'],
             ['/base/curry.md', '函数柯里化'],
+            ['/base/eventloop.md', 'EventLoop事件循环机制'],
           ]
         }
       ],
@@ -80,7 +81,6 @@ module.exports = {
           title: 'CSS',
           children: [
             ['/css/bfc.md', '什么是BFC？'],
-            ['/css/flex.md', 'flex弹性布局'],
           ]
         }
       ],
