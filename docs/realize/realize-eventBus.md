@@ -2,7 +2,7 @@
 
 ```javascript
 
-class Event {
+class EventBus {
   constructor() {
     this.events = new Map()
   }
@@ -57,5 +57,5 @@ class Event {
   }
 }
 
-export default Event
+export default EventBus
 ```

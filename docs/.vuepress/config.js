@@ -36,15 +36,15 @@ module.exports = {
           { text: 'http协议', link: '/http/http.md' },
         ]
       },
-      // {
-      //   text: '框架源码解读',
-      //   items: [
-      //     {text: 'JQuery', link: ''},
-      //     {text: 'Vue', link: ''},
-      //     {text: 'React', link: ''},
-      //     {text: 'Webpack', link: ''}
-      //   ]
-      // },
+      {
+        text: '框架源码解读',
+        items: [
+          // {text: 'JQuery', link: ''},
+          {text: 'Vue', link: '/framework/Vue/2.x/vue.md'},
+          // {text: 'React', link: ''},
+          // {text: 'Webpack', link: ''}
+        ]
+      },
       { text: '关于我', link: '/about/me.md' },
       { text: 'Github', link: 'https://github.com/WeirShi/vuepress-blog' },
       { text: '苏ICP备19022770号-1', link: 'https://beian.miit.gov.cn/#/Integrated/index'}
@@ -128,6 +128,29 @@ module.exports = {
           title: '前端需要知道的http协议',
           children: [
             ['/http/http.md', 'http协议']
+          ]
+        }
+      ],
+      '/framework/': [
+        {
+          title: '框架源码解读',
+          children: [
+            {
+              title: 'Vue2.x',
+              children: [
+                ['/framework/Vue/2.x/vue.md', 'Vue2原理'],
+              ]
+            },
+            {
+              title: 'Vue3.x',
+              children: [
+                ['/framework/Vue/3.x/vue.md', 'Vue3原理'],
+              ]
+            },
+            // {
+            //   title: 'React',
+            //   children: []
+            // }
           ]
         }
       ]
