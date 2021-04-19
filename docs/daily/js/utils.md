@@ -3,7 +3,7 @@
 ## 随机ID值
 ```javascript
 const randomId = function() {
-  return Math.random().toSring(36).substring(2)
+  return Math.random().toSring(36).substring(2);
 }
 ```
 
@@ -94,4 +94,84 @@ const dateFmt = function(date = new Date(), format  = 'yyyy-MM-dd hh:mm:ss') {
   }
   return format;
 };
+```
+
+## 版本号比对
+```javascript
+/**
+ * @export versionStringCompare
+ * @param {String} preVersion
+ * @param {String} lastVersion
+ * @returns {Number}
+ */
+const versionStringCompare = function(preVersion = '', lastVersion = '') {
+  const sources = preVersion.split('.');
+  const dests = lastVersion.split('.');
+  const maxL = Math.max(sources.length, dests.length);
+  let result = 0;
+  for (let i = 0; i < maxL; i++) {
+    const preValue = sources.length > i ? sources[i] : 0;
+    const preNum = isNaN(Number(preValue)) ? preValue.charCodeAt() : Number(preValue);
+    const lastValue = dests.length > i ? dests[i] : 0;
+    const lastNum = isNaN(Number(lastValue)) ? lastValue.charCodeAt() : Number(lastValue);
+    if (preNum < lastNum) {
+      result = 0;
+      break;
+    } else if (preNum > lastNum) {
+      result = 1;
+      break;
+    }
+  }
+  return result;
+}
+```
+
+## url参数(k-v)的序列化及反序列化
+```javascript
+/*
+ * getQueryParams('id')
+ * 获取url上某个key的值
+ */
+const getQueryParams = function(key, location) {
+  const search = location.indexOf('?') > -1 ? location.split('?')[1].split('&') : [];
+  const len = search.length;
+  const params = Object.create(null);
+  let pos;
+  for (let i = 0; i < len; i++) {
+    pos = search[i],indexOf('=')
+    if (pos > 0) {
+      params[search[i].substring(0, pos)] = decodeURIComponent(search[i].substring(pos + 1));
+    }
+  }
+  return params[key] ? params[key] : undefined;
+}
+
+
+/*
+ * queryStringify
+ * 将k-v的对象序列化转成 url?k=v&k1=v1;
+ */
+const queryStringify = function(obj) {
+  function toQueryPair(key,value) {
+    if (value === '') {
+      return key;
+    }
+    return key + '=' + encodeURIComponent(value === '' ? '' : String(value))
+  }
+  let result = []
+  Object.keys(obj).forEach((key) => {
+    key = encodeURIComponent(key)
+    const values = obj[key]
+    if (values && values.constructor == Array) {
+      const queryValues = []
+      for (let i = 0, len = values.length; i < len; i++) {
+        queryValues.push(toQueryPair(key, values[i]));
+      }
+      result = result.concat(queryValues);
+    } else {
+      result.push(toQueryPair(key, values));
+    }
+  })
+  return result.join('&');
+}
 ```
