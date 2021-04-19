@@ -55,7 +55,8 @@ module.exports = {
         {
           title: 'JS相关',
           children: [
-            ['/daily/js/popstate.md', '监听浏览器返回事件']
+            ['/daily/js/popstate.md', '监听浏览器返回事件'],
+            ['/daily/js/utils.md', '日常开发工具函数'],
           ]
         }
       ],
