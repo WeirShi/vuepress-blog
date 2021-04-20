@@ -139,6 +139,7 @@ module.exports = {
               title: 'Vue2.x',
               children: [
                 ['/framework/Vue/2.x/vue.md', 'Vue2原理'],
+                ['/framework/Vue/2.x/vue-observe.md', 'Vue2响应式原理'],
               ]
             },
             {

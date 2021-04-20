@@ -129,6 +129,18 @@ const versionStringCompare = function(preVersion = '', lastVersion = '') {
 ## url参数(k-v)的序列化及反序列化
 ```javascript
 /*
+ * 反序列化URL参数
+ * { age: "25", name: "Tom" }
+ */
+const parseUrlSearch = function(location) {
+    return location.search.replace(/(^\?)|(&$)/g, "").split("&").reduce((t, v) => {
+        const [key, val] = v.split("=");
+        t[key] = decodeURIComponent(val);
+        return t;
+    }, {});
+}
+
+/*
  * getQueryParams('id')
  * 获取url上某个key的值
  */
@@ -151,27 +163,10 @@ const getQueryParams = function(key, location) {
  * queryStringify
  * 将k-v的对象序列化转成 url?k=v&k1=v1;
  */
-const queryStringify = function(obj) {
-  function toQueryPair(key,value) {
-    if (value === '') {
-      return key;
-    }
-    return key + '=' + encodeURIComponent(value === '' ? '' : String(value))
-  }
-  let result = []
-  Object.keys(obj).forEach((key) => {
-    key = encodeURIComponent(key)
-    const values = obj[key]
-    if (values && values.constructor == Array) {
-      const queryValues = []
-      for (let i = 0, len = values.length; i < len; i++) {
-        queryValues.push(toQueryPair(key, values[i]));
-      }
-      result = result.concat(queryValues);
-    } else {
-      result.push(toQueryPair(key, values));
-    }
-  })
-  return result.join('&');
+const queryStringify = function(search = {}) {
+  return Object.entries(search).reduce(
+    (t, v) => `${t}${v[0]}=${encodeURIComponent(v[1])}&`,
+    Object.keys(search).length ? "?" : ""
+  ).replace(/&$/, "");
 }
 ```
