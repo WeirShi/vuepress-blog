@@ -140,6 +140,7 @@ module.exports = {
               children: [
                 ['/framework/Vue/2.x/vue.md', 'Vue2原理'],
                 ['/framework/Vue/2.x/vue-observe.md', 'Vue2响应式原理'],
+                ['/framework/Vue/2.x/vue-vdom.md', '虚拟Dom'],
               ]
             },
             {

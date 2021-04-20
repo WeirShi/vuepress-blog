@@ -89,9 +89,9 @@ class Vue {
 ```
 ### Observer类
 - 负责把data中的属性转成响应式数据
-- data中的某个属性也是对象是，需要把该属性转换成响应式数据
+- data中的某个属性也是对象时，需要递归调用把该对象中的所有属性转换成响应式数据
 - 当数据发生变化时发送通知
-- 内部方法函数：walk(data)、defineReactive(data, key, value)
+- 内部结构：walk(data)、defineReactive(data, key, value)
 
 ```javascript
 class Observer {
@@ -337,7 +337,7 @@ class Watcher {
 1. 当数据发生变化时，View视图也发生变化
 2. 当View视图变化时，数据也发生变化
 
-表单元素中v-model绑定的值，默认添加input事件，当视图中值发生变化时，通过input事件将更改后的值赋值给实例中的对应属性，当对应属性值发生变化后就会触发数据响应式机制。
+表单元素中v-model绑定的值，默认添加input事件，当视图中值发生变化时，通过input事件将更改后的值赋值给实例中的对应属性，当对应属性值发生变化后就会触发数据响应式机制。    
 在Compiler类中处理v-model指令的函数中添加代码
 ```javascript
  modelUpdater(node, value, key) {
@@ -351,3 +351,7 @@ class Watcher {
 
 ## 完整代码
 完整的代码见[github](https://github.com/WeirShi/vue-study)
+
+## 总结
+整体流程
+![整体流程](/assets/images/summary.jpg)
