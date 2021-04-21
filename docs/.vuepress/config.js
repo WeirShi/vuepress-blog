@@ -147,6 +147,7 @@ module.exports = {
               title: 'Vue3.x',
               children: [
                 ['/framework/Vue/3.x/vue.md', 'Vue3原理'],
+                ['/framework/Vue/3.x/ref,reactive.md', 'Vue3中ref和reactive的区别'],
               ]
             },
             // {
