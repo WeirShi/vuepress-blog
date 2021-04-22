@@ -1,4 +1,4 @@
-# Vue3 ref和reactive的区别
+# Vue3中ref和reactive的区别
 
 Vue3正式发布以后，已经有很多同学都开始投入使用了，在使用的过程中，我们发现Vue3中有2种声明响应式数据的方法`ref()`、`reactive()`。    
 那这两种方式有什么不一样的呢？
@@ -30,12 +30,12 @@ export default {
 ![打印](/assets/images/vue3-reactive.jpg)
 
 发现用`reactive`定义number变量时，vue给出了一个警告，提示这个值不能被reactive创建，这是为什么呢？   
-于是去查看了一个vue3源码
+于是去查看了一下vue3源码
 
 ![reactive源码](/assets/images/vue3-reactive1.jpg)
 
-从源码中可以看到，当使用`reactive`定义数据时，会先进行判断定义的数据是否是对象，是对象的话才会进行做响应式的处理，反之就直接被return出来了。    
-由此我们可以看出来官方推荐定义复杂类型的数据时使用`reactive`这个API。
+从源码中可以看到，当使用`reactive`定义数据时，会先进行判断定义的数据是否是对象，是对象的话才会继续进行数据响应式的处理，反之就直接被return出来了。    
+由此我们可以看出来官方在使用`reactive`这个API的时候更推荐用来定义对象类型的数据。
 
 因此上面的代码，我们可以改成
 ```javascript
