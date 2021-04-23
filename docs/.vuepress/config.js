@@ -74,6 +74,7 @@ module.exports = {
             ['/base/clone.md', '深浅拷贝'],
             ['/base/curry.md', '函数柯里化'],
             ['/base/eventloop.md', 'EventLoop事件循环机制'],
+            ['/base/jsbridge.md', 'JsBridge'],
           ]
         }
       ],
