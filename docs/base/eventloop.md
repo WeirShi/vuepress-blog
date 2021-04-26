@@ -51,3 +51,5 @@ console.log("end")
 ## async/await    
 
 `async/await` 是ES7中推出的语法糖，是针对ES6`generate/yield`的语法糖，`async`返回的同样是一个Promise对象，遇到`await`就会等待异步操作完成，再继续执行后面的语句。**注意：`await`命令后面的`Promise`对象，运行结果可能是`rejected`，所以最好把`await`命令放在`try...catch`代码块中。**
+
+
