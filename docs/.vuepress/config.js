@@ -23,7 +23,8 @@ module.exports = {
       {
         text: '日常开发记录',
         items: [
-          { text: 'JS相关', link: '/daily/js/popstate.md' }
+          { text: 'JS相关', link: '/daily/js/popstate.md' },
+          { text: 'node相关', link: '/daily/node/pm2.md' }
         ]
       },
       {
@@ -57,6 +58,12 @@ module.exports = {
           children: [
             ['/daily/js/popstate.md', '监听浏览器返回事件'],
             ['/daily/js/utils.md', '日常开发工具函数'],
+            ['/daily/js/useragent.md', '判断浏览器函数'],
+          ]
+        }, {
+          title: 'node相关',
+          children: [
+            ['/daily/node/pm2.md', 'pm2常用命令集合']
           ]
         }
       ],

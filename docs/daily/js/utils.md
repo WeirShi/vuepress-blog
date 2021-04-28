@@ -144,20 +144,13 @@ const parseUrlSearch = function(location) {
  * getQueryParams('id')
  * 获取url上某个key的值
  */
-const getQueryParams = function(key, location) {
-  const search = location.indexOf('?') > -1 ? location.split('?')[1].split('&') : [];
-  const len = search.length;
-  const params = Object.create(null);
-  let pos;
-  for (let i = 0; i < len; i++) {
-    pos = search[i],indexOf('=')
-    if (pos > 0) {
-      params[search[i].substring(0, pos)] = decodeURIComponent(search[i].substring(pos + 1));
-    }
-  }
-  return params[key] ? params[key] : undefined;
-}
 
+const getParam = param => {
+  // 获取浏览器参数
+  const r = new RegExp(`\\?(?:.+&)?${param}=(.*?)(?:&.*)?$`)
+  const m = window.location.toString().match(r)
+  return m ? decodeURI(m[1]) : ''
+}
 
 /*
  * queryStringify
@@ -170,3 +163,19 @@ const queryStringify = function(search = {}) {
   ).replace(/&$/, "");
 }
 ```
+
+<!-- ```
+// const getQueryParams = function(key, location) {
+//   const search = location.indexOf('?') > -1 ? location.split('?')[1].split('&') : [];
+//   const len = search.length;
+//   const params = Object.create(null);
+//   let pos;
+//   for (let i = 0; i < len; i++) {
+//     pos = search[i],indexOf('=')
+//     if (pos > 0) {
+//       params[search[i].substring(0, pos)] = decodeURIComponent(search[i].substring(pos + 1));
+//     }
+//   }
+//   return params[key] ? params[key] : undefined;
+// }
+``` -->
