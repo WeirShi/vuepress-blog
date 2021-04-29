@@ -63,6 +63,7 @@ module.exports = {
         }, {
           title: 'node相关',
           children: [
+            ['/daily/node/git-webhooks.md', 'Github配置WebHooks'],
             ['/daily/node/pm2.md', 'pm2常用命令集合']
           ]
         }

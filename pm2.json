@@ -1,0 +1,4 @@
+[{
+  "name": "deploy blog",
+  "script": "deployed.js"
+}]
