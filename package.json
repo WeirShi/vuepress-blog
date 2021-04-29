@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "deploy": "bash local_deploy.sh"
   },
   "devDependencies": {
     "highlight.js": "^10.7.2",

@@ -3,7 +3,8 @@
 ## 随机ID值
 ```javascript
 const randomId = function() {
-  return Math.random().toSring(36).substring(2);
+  const n = Math.random();
+  return n.toSring(36).substring(2);
 }
 ```
 
