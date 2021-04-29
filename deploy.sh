@@ -1,3 +1,3 @@
 git pull origin main
 
-yarn build
+npm run build
