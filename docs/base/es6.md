@@ -13,6 +13,22 @@ Map的数据结构可以使用任意类型的数据作为key
 ### WeakSet
 类似于`WeakMap`， 内部成员只能是对象，对其中的对象也是弱引用，当没有其他对`WeakSet`中的对象的引用的话，这些对象会被回收掉，`WeakSet`同样无法被遍历
 
+
+## Symbol
+ES6中新增了一种数据类型，`Symbol`，不是构造函数，在使用时不需要`new`，用来表示一个独一无二的数据，对象的key可以是`Symbol`。     
+`Symbol`也可以用来标识对象中的私有成员，因为`Symbol`的唯一性，外部访问时无法创建同一个`Symbol`数据，因此可以用来表示对象中的私有成员。正因如此，如果对象的key是一个`Symbol`类型的话，是无法遍历得到这个key值的，既无法使用`Object.keys`或者`for of`遍历，只能使用`Object.getOwnPropertySymbols`方法来获取`Symbol`类型的key值。
+
+
+
+如果需要使用同一个`Symbol`类型的数据，我们可以使用`Symbol.for`方法，传入同一个字符串时，返回的`Symbol`类型的数据也会是一样的，
+```js
+const s1 = Symbol.for('symbol')
+const s2 = Symbol.for('symbol')
+
+console.log(s1 === s2)   // true
+```
+需要注意的是该方法如果传入的值不是字符串的话，Symbol内部会先将其传值字符串，因此传入一个`true`和字符串`'true'`，返回的Symbol数据也会是同一个
+
 ## Reflect
 
 `Reflect`是ES6中引入的对象操作方法，一个静态类，不能使用`new Reflect()`来进行调用，类似于`Math`，内置的静态方法与`proxy`的方法相同。      

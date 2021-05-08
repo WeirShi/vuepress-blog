@@ -135,9 +135,9 @@ module.exports = {
       ],
       '/http/': [
         {
-          title: '前端需要知道的http协议',
+          title: '前端需要知道的网络协议',
           children: [
-            ['/http/http.md', 'http协议']
+            ['/http/http.md', '网络协议']
           ]
         }
       ],
