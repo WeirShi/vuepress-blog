@@ -25,3 +25,68 @@ let vm = new Proxy(data, {
 vm.msg = 'Hello World'
 console.log(vm.msg) // 'Hello World'
 ```
+
+## Proxy 对比 Object.defineProperty
+1. `Object.defineProperty`只能监听对象属性的读写，`Proxy`可以监听到更多操作，例如：对象属性的delete，对对象中方法的调用
+```js
+// 监听对象属性的删除
+const person = {
+  name: 'Tom',
+  age: 20
+}
+
+const personProxy = new Proxy(person, {
+  deleteProperty(target, property) {
+    console.log('delete', property)
+    delete target[property]
+  }
+})
+
+delete personProxy.age
+```
+2. `Proxy`可以监听数组的操作，`Object.defineProperty`要监听到数组的操作，需要重写修改原数组的操作方法
+```js
+const list = []
+const listProxy = new Proxy(list, {
+  set(target, prop, value) {
+    console.log('set', prop, value)
+    target[prop] = value
+    return true
+  }
+})
+listProxy.push(1)
+```
+3. `Proxy`是以非侵入的方式来监听对象的读写
+Proxy不需要写特定的属性来监听该属性的变化，而Object.defineProperty需要写特定属性的方法来监听
+```js
+const person = {}
+Object.defineProperty(person, 'name', {
+  get() {
+    return person['name']
+  },
+  set(value) {
+    person['name'] = value
+  }
+})
+
+Object.defineProperty(person, 'age', {
+  get() {
+    return person['age']
+  },
+  set(value) {
+    person['age'] = value
+  }
+})
+
+// Proxy写法 只需要写一次 方法即可， 更为合理
+const person1 = {}
+
+const personProxy = new Proxy(person1, {
+  set(target, prop, value) {
+    target[prop] = value
+  },
+  get(target, prop) {
+    return target[prop]
+  }
+})
+```

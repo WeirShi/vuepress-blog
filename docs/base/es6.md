@@ -1,4 +1,19 @@
-# Reflect
+# ES6的新特性
+
+## Map、Set、WeakMap、WeakSet
+### Set
+类似于传统的数组，但是`Set`中的成员不允许重复
+### Map
+传统的对象的key只能是字符串，如果使用对象作为key值的话，js会优先使用toString的方法转成string来作为key值      
+Map的数据结构可以使用任意类型的数据作为key
+
+### WeakMap
+`WeakMap`只能使用对象作为key值，而被引用的key值是弱引用，因此该对象可能在任意时刻被回收掉。     
+`WeakMap`无法被遍历，没有`Object.keys()`、`Object.values()`、`Object.entries()`方法，只有`get`、`set`、`has`、`delete`4个方法。  
+### WeakSet
+类似于`WeakMap`， 内部成员只能是对象，对其中的对象也是弱引用，当没有其他对`WeakSet`中的对象的引用的话，这些对象会被回收掉，`WeakSet`同样无法被遍历
+
+## Reflect
 
 `Reflect`是ES6中引入的对象操作方法，一个静态类，不能使用`new Reflect()`来进行调用，类似于`Math`，内置的静态方法与`proxy`的方法相同。      
 **个人感觉 `Reflect`的引入是对ES5中操作对象方法的规范处理**    
@@ -21,7 +36,7 @@ Reflect.deleteProperty(obj, 'name')
 Reflect.ownKeys(obj)
 ```
 
-## 静态方法
+### Reflect的静态方法
 1.  `Reflect.get()` 获取对象中的某一个属性，类似于执行`obj['name']`
 2.  `Reflect.set` 给对象设置属性和值
 3.  `Reflect.has()` 判断对象中是否存在某一个属性，类似于`in`运算符

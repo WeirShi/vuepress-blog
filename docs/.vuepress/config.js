@@ -83,7 +83,7 @@ module.exports = {
             ['/base/curry.md', '函数柯里化'],
             ['/base/eventloop.md', 'EventLoop事件循环机制'],
             ['/base/jsbridge.md', 'JsBridge'],
-            ['/base/reflect.md', 'Reflect'],
+            ['/base/es6.md', 'ES6的新特性'],
           ]
         }
       ],
