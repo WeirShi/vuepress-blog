@@ -90,3 +90,5 @@ const personProxy = new Proxy(person1, {
   }
 })
 ```
+4. 使用`Proxy`建立响应式是对原对象进行了拷贝，创建了对象的响应式，如果修改原对象数据时是无法展示响应式的；而`Object.defineProperty`是在原对象上将对象中的属性值变成响应式
+

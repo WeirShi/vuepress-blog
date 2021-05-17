@@ -30,8 +30,9 @@ module.exports = {
       {
         text: '前端',
         items: [
-          { text: 'JS基础', link: '/base/operator.md' },
+          { text: 'HTML', link: '/html/html5.md' },
           { text: 'CSS', link: '/css/bfc.md' },
+          { text: 'JS基础', link: '/base/operator.md' },
           { text: '手写题', link: '/realize/realize-indexof.md' },
           { text: '面试题', link: '/interview/variable.md' },
           { text: 'http协议', link: '/http/http.md' },
@@ -42,8 +43,8 @@ module.exports = {
         items: [
           // {text: 'JQuery', link: ''},
           {text: 'Vue', link: '/framework/Vue/2.x/vue.md'},
-          // {text: 'React', link: ''},
-          // {text: 'Webpack', link: ''}
+          {text: 'React', link: '/framework/React/lifecircle.md'},
+          {text: 'Webpack', link: '/framework/Webpack/webpack.md'}
         ]
       },
       { text: '关于我', link: '/about/me.md' },
@@ -52,7 +53,7 @@ module.exports = {
     ],
     // 侧边栏
     sidebar: {
-      '/daily/': [
+      '/daily/js/': [
         {
           title: 'JS相关',
           children: [
@@ -60,7 +61,10 @@ module.exports = {
             ['/daily/js/utils.md', '日常开发工具函数'],
             ['/daily/js/useragent.md', '判断浏览器函数'],
           ]
-        }, {
+        }
+      ],
+      '/daily/node/': [
+        {
           title: 'node相关',
           children: [
             ['/daily/node/git-webhooks.md', 'Github配置WebHooks'],
@@ -84,6 +88,14 @@ module.exports = {
             ['/base/eventloop.md', 'EventLoop事件循环机制'],
             ['/base/jsbridge.md', 'JsBridge'],
             ['/base/es6.md', 'ES6的新特性'],
+          ]
+        }
+      ],
+      '/html/': [
+        {
+          title: 'HTML基础',
+          children: [
+            ['/html/html5.md', 'HTML5相关内容']
           ]
         }
       ],
@@ -141,7 +153,7 @@ module.exports = {
           ]
         }
       ],
-      '/framework/': [
+      '/framework/Vue/': [
         {
           title: '框架源码解读',
           children: [
@@ -160,11 +172,23 @@ module.exports = {
                 ['/framework/Vue/3.x/vue.md', 'Vue3原理'],
                 ['/framework/Vue/3.x/ref,reactive.md', 'Vue3中ref和reactive的区别'],
               ]
-            },
-            // {
-            //   title: 'React',
-            //   children: []
-            // }
+            }
+          ]
+        }
+      ],
+      '/framework/React/': [
+        {
+          title: 'React',
+          children: [
+            ['/framework/React/lifecircle.md', 'React生命周期']
+          ]
+        }
+      ],
+      '/framework/Webpack/': [
+        {
+          title: 'Webpack',
+          children: [
+            ['/framework/Webpack/webpack.md', 'Webpack基础内容']
           ]
         }
       ]

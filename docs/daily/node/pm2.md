@@ -26,13 +26,13 @@ pm2 reset [app-name]                 # 重置重启数量
 pm2 startup                          # 创建开机自启动命令
 pm2 save                             # 保存当前应用列表
 pm2 resurrect                        # 重新加载保存的应用列表
-pm2 update                           # Save processes, kill PM2 and restore processes
-pm2 generate                         # Generate a sample json configuration file
-pm2 deploy app.json prod setup       # Setup "prod" remote server
-pm2 deploy app.json prod             # Update "prod" remote server
-pm2 deploy app.json prod revert 2    # Revert "prod" remote server by 2
-pm2 module:generate [name]           # Generate sample module with name [name]
-pm2 install pm2-logrotate            # Install module (here a log rotation system)
-pm2 uninstall pm2-logrotate          # Uninstall module
-pm2 publish                          # Increment version, git push and npm publish
+pm2 update                           # 保存进程，移除pm2，重启进程
+pm2 generate                         # 生成一个简单的JSON配置文件
+pm2 deploy app.json prod setup       # 部署‘prod’远程服务设置
+pm2 deploy app.json prod             # 更新‘prod’远程服务设置
+pm2 deploy app.json prod revert 2    # 回滚‘prod’远程服务设置
+pm2 module:generate [name]           # 生成命名的模块
+pm2 install pm2-logrotate            # 安装模块依赖
+pm2 uninstall pm2-logrotate          # 卸载模块依赖
+pm2 publish                          # 发布
 ```
