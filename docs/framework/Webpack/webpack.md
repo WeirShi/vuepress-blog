@@ -364,5 +364,6 @@ module.exports = {
   ]
 }
 ```
-`chunkhash`能够精确定位文件的变化    
-`contenthash`能够精确定位文件内容的变化    
+另外还有`chunkhash`和`contenthash`2种hash模式
+- `chunkhash`能够精确定位文件的变化
+- `contenthash`能够精确定位文件内容的变化
