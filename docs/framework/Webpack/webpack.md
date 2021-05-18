@@ -271,4 +271,98 @@ module.exports = {
   ]
 }
 ```
+### 提取公共模块
+多入口打包时，会使用到部分公共模块，分别加载的话就会比较浪费资源， 我们可以在配置文件中添加`optimization`属性，再添加`splitChunk`属性，提取公共模块
+```js
+module.exports = {
+  ...
+  optimization: {
+    splitChunk: {
+      // 提取所有的公共模块
+      chunks: 'all'
+    }
+  }
+}
+```
 
+### 按需加载，动态导入组件
+ESM的方式动态导入组件
+```js
+import('./src/component').then(({ default: component }) => {
+  // 其他代码
+  ...
+})
+```
+在使用框架开发业务时，我们一般在`router.js`中使用`import()`方法来导入组件，实现按需加载     
+动态导入组件时，`webpack`默认会将这些分包的bundle文件以数字来命名，我们也可以在使用动态导入组件时，利用webpack的魔法注释来给这些分包自定义命名，用法：在`import()`方法中使用行内注释，如下
+```js
+import(/* webpackChunkName: components */ './src/component')
+```
+动态加载的组件如果命名一样的话，webpack就会将这些组件打包到一个bundle文件中
+
+### CSS文件的按需加载 - MiniCssExtractPlugin
+配置该插件后，webpack会将css代码提取到一个文件中，通过`link`标签来加载css文件，配置方式
+```js
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+module.exports = {
+  ...
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          // 提取css文件，就不需要style-loader
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
+      }
+    ]
+  },
+  plugins: [
+    new MiniCssExtractPlugin()
+  ]
+}
+```
+压缩CSS文件：`OptimizeCssAssetsWebpackPlugin`，配置方式
+```js
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
+module.exports = {
+  ...
+  plugins: [
+    new OptimizeCssAssetsWebpackPlugin()
+  ]
+}
+```
+官方文档中，将该插件配置在了`optimization`属性中，原因：**如果将该插件配置在`plugins`中，webpack在任何情况下都会工作，配置在`optimization`属性中，就只会在`minimize`属性开启时才会工作**
+```js
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
+module.exports = {
+  ...
+  optimization: {
+    // 配置该属性时，需要再手动添加压缩js的插件
+    minimizer: [
+      new TerserWebpackPlugin(),
+      new OptimizeCssAssetsWebpackPlugin()
+    ]
+  }
+}
+```
+
+### 输出文件名Hash
+在部署时，我们都会开启静态资源缓存，当访问同一资源时，客户端就可以直接访问缓存，但是同样会有一定问题，当我们重新打包更新文件后，文件名一致时，就会出现无法访问到最新的资源文件，因此我们需要给资源文件配置hash值
+```js
+module.exports = {
+  ...
+  output: {
+    filename: '[name].[hash:6].bundle.js'
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash:6].bundle.css'
+    })
+  ]
+}
+```
+`chunkhash`能够精确定位文件的变化    
+`contenthash`能够精确定位文件内容的变化    
