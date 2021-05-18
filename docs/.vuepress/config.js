@@ -34,7 +34,7 @@ module.exports = {
           { text: 'CSS', link: '/css/bfc.md' },
           { text: 'JS基础', link: '/base/operator.md' },
           { text: '手写题', link: '/realize/realize-indexof.md' },
-          { text: '面试题', link: '/interview/variable.md' },
+          { text: '面试题', link: '/interview/this.md' },
           { text: 'http协议', link: '/http/http.md' },
         ]
       },
@@ -136,6 +136,7 @@ module.exports = {
         {
           title: '面试遇到过的问题',
           children: [
+            ['/interview/this.md', 'this、作用域相关题目'],
             ['/interview/variable.md', 'var、const、let'],
             ['/interview/Object.prototype.toString.md', 'Object.prototype.toString'],
             ['/interview/decimals.md', '0.1+0.2!==0.3'],
