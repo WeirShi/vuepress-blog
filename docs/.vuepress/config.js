@@ -23,7 +23,7 @@ module.exports = {
       {
         text: '日常开发记录',
         items: [
-          { text: 'JS相关', link: '/daily/js/popstate.md' },
+          { text: 'JS相关', link: '/daily/js/utils.md' },
           { text: 'node相关', link: '/daily/node/pm2.md' }
         ]
       },
@@ -57,8 +57,8 @@ module.exports = {
         {
           title: 'JS相关',
           children: [
-            ['/daily/js/popstate.md', '监听浏览器返回事件'],
             ['/daily/js/utils.md', '日常开发工具函数'],
+            ['/daily/js/popstate.md', '监听浏览器返回事件'],
             ['/daily/js/useragent.md', '判断浏览器函数'],
           ]
         }
@@ -142,7 +142,9 @@ module.exports = {
             ['/interview/decimals.md', '0.1+0.2!==0.3'],
             ['/interview/curry.md', '函数柯里化'],
             ['/interview/clock-swing.md', '45度钟摆来回摆动'],
-            ['/interview/url.md', '用户输入url后，浏览器发生了什么？']
+            ['/interview/url.md', '用户输入url后，浏览器发生了什么？'],
+            ['/interview/chain.md', 'Promise的链式调用和jQuery的链式调用有什么区别？'],
+            // ['/interview/spa.md', 'SPA单页应用原理'],
           ]
         }
       ],

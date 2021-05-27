@@ -146,7 +146,7 @@ const parseUrlSearch = function(location) {
  * 获取url上某个key的值
  */
 
-const getParam = param => {
+const getParam = function(param) {
   // 获取浏览器参数
   const r = new RegExp(`\\?(?:.+&)?${param}=(.*?)(?:&.*)?$`)
   const m = window.location.toString().match(r)
