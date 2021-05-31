@@ -4,7 +4,7 @@ lang: zh-CN
 heroImage: /assets/images/avatar.jpeg
 tagline: 我只是一个菜鸡野生小前端
 actionText: 马上开始 →
-actionLink: /base/operator.md
+actionLink: /html/html5.md
 features:
 - title: 博客
   details: 日常记录前端的所有知识点
