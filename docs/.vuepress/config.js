@@ -143,7 +143,8 @@ module.exports = {
             ['/interview/curry.md', '函数柯里化'],
             ['/interview/clock-swing.md', '45度钟摆来回摆动'],
             ['/interview/url.md', '用户输入url后，浏览器发生了什么？'],
-            ['/interview/chain.md', 'Promise的链式调用和jQuery的链式调用有什么区别？'],
+            ['/interview/promise.md', 'Promise'],
+            ['/interview/event-loop.md', 'EventLoop'],
             // ['/interview/spa.md', 'SPA单页应用原理'],
           ]
         }
@@ -183,7 +184,8 @@ module.exports = {
         {
           title: 'React',
           children: [
-            ['/framework/React/lifecircle.md', 'React生命周期']
+            ['/framework/React/lifecircle.md', 'React生命周期'],
+            ['/framework/React/preposition.md', 'React基础内容'],
           ]
         }
       ],

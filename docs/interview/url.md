@@ -54,6 +54,19 @@
 - 浏览器会将各层的信息发送给 GPU，GPU 会将各层合成（ composite ），显示在屏幕上
 
 
+
+## 扩展
+1. 什么是TCP/IP协议?
+
+`TCP/IP`是互联网相关的各类协议族的总称，比如：TCP，UDP，IP，FTP，HTTP，ICMP，SMTP等都属于`TCP/IP`协议。     
+`TCP/IP`协议可以划分为四层，分别是链路层，网络层，传输层和应用层。
+  - 链路层主要负责封装和解封IP报文，发送和接收ARP/RARP报文
+  - 网络层主要负责路由以及把分组报文发送给目标网络和主机
+  - 传输层主要负责对报文进行分组和重组，并以TCP或UDP协议格式封装报文
+  - 应用层主要负责想用户提供应用程序，比如HTTP，FTP，DNS，SMTP等
+
+<img src="/assets/images/TCP-IP.png" alt="TCP/IP" />
+
 <!-- ### 浏览器解析HTML、JS、CSS
 浏览器开始加载解析HTML、JS、CSS等资源文件。   
 浏览器解析HTML文本生成DOM树，解析CSS样式文本解析成styleSheet，然后通过DOM树和CSSOM生成渲染树，渲染图层展示页面。   
