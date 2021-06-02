@@ -1,6 +1,12 @@
 ### JS实现call,apply,bind方法
 
 #### call
+简单介绍：call方法在使用一个指定的this值和若干个指定的参数值的前提下调用某个函数或方法        
+
+实现步骤：
+1. 将函数设为对象的属性
+2. 执行该函数
+3. 删除该函数
 ```javascript
 Function.prototype.myCall = function(context = window, ...args) {
   let fn = Symbol()
@@ -12,6 +18,7 @@ Function.prototype.myCall = function(context = window, ...args) {
 ```
 
 #### apply
+apply的实现与call类似
 ```javascript
 Function.prototype.myApply = function(context = window) {
   let fn = Symbol()
