@@ -35,7 +35,7 @@ module.exports = {
           { text: 'JS基础', link: '/base/operator.md' },
           { text: '手写题', link: '/realize/realize-indexof.md' },
           { text: '面试题', link: '/interview/this.md' },
-          { text: 'http协议', link: '/http/http.md' },
+          // { text: 'http协议', link: '/http/http.md' },
         ]
       },
       {
@@ -47,7 +47,7 @@ module.exports = {
           {text: 'Webpack', link: '/framework/Webpack/webpack.md'}
         ]
       },
-      { text: '关于我', link: '/about/me.md' },
+      // { text: '关于我', link: '/about/me.md' },
       { text: 'Github', link: 'https://github.com/WeirShi/vuepress-blog' },
       { text: '苏ICP备19022770号-1', link: 'https://beian.miit.gov.cn/#/Integrated/index'}
     ],
@@ -167,8 +167,8 @@ module.exports = {
               title: 'Vue2.x',
               children: [
                 ['/framework/Vue/2.x/vue.md', 'Vue2原理'],
+                ['/framework/Vue/2.x/vue-vdom.md', '虚拟Dom'],
                 ['/framework/Vue/2.x/vue-observe.md', 'Vue2响应式原理'],
-                // ['/framework/Vue/2.x/vue-vdom.md', '虚拟Dom'],
                 ['/framework/Vue/2.x/vue-router.md', 'VueRouer原理']
               ]
             },
@@ -186,8 +186,9 @@ module.exports = {
         {
           title: 'React',
           children: [
-            ['/framework/React/lifecircle.md', 'React生命周期'],
+            // ['/framework/React/lifecircle.md', 'React生命周期'],
             ['/framework/React/preposition.md', 'React基础内容'],
+            // ['/framework/React/hooks.md', 'React-Hooks'],
           ]
         }
       ],
