@@ -1,22 +1,57 @@
 # 日常开发工具函数
 
 ## 随机ID值
-```javascript
+```js
 const randomId = function() {
   const n = Math.random();
-  return n.toSring(36).substring(2);
+  return n.toString(36).substring(2);
+}
+```
+## 随机uuid
+```js
+const uuid = function (len = 8, radix = 16) {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('')
+  const value = []
+  let i = 0
+  radix = radix || chars.length
+
+  if (len) {
+    for (i = 0; i < len; i++) value[i] = chars[0 | (Math.random() * radix)]
+  } else {
+    let r
+    value[8] = value[13] = value[18] = value[23] = '-'
+    value[14] = '4'
+    for (i = 0; i < 36; i++) {
+      if (!value[i]) {
+        r = 0 | (Math.random() * 16)
+        value[i] = chars[i === 19 ? (r & 0x3) | 0x8 : r]
+      }
+    }
+  }
+  return value.join('')
 }
 ```
 
 ## 生成一个范围内的随机数
-```javascript
+```js
 const rangeRandomNum = function(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 ```
 
+## delay延迟
+```js
+const delay = function(delayTime = 25) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve()
+    }, delayTime)
+  })
+}
+```
+
 ## 倒计时
-```javascript
+```js
 /**
  * 倒计时
  * @param diff 倒计时时间/s
@@ -69,7 +104,7 @@ const countDown = function(diff, loadTime, item, callback) {
 ```
 
 ## 时间日期格式化
-```javascript
+```js
 /** 时间格式化
  * @param {dateTime} date 标准时间格式 -> new Date()
  * @param {string} format 时间格式化的格式 'yyyy-MM-dd hh:mm:ss'
@@ -98,7 +133,7 @@ const dateFmt = function(date = new Date(), format  = 'yyyy-MM-dd hh:mm:ss') {
 ```
 
 ## 版本号比对
-```javascript
+```js
 /**
  * @export versionStringCompare
  * @param {String} preVersion
@@ -128,7 +163,7 @@ const versionStringCompare = function(preVersion = '', lastVersion = '') {
 ```
 
 ## url参数(k-v)的序列化及反序列化
-```javascript
+```js
 /*
  * 反序列化URL参数
  * { age: "25", name: "Tom" }

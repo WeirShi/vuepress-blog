@@ -85,6 +85,7 @@ module.exports = {
             ['/base/param.md', '参数传递'],
             ['/base/prototype.md', '原型和继承'],
             ['/base/create-object.md', '创建对象的多种方式'],
+            ['/base/inherit.md', '继承的多种方式'],
             ['/base/clone.md', '深浅拷贝'],
             ['/base/curry.md', '函数柯里化'],
             ['/base/eventloop.md', 'EventLoop事件循环机制'],
