@@ -23,6 +23,7 @@ module.exports = {
       {
         text: '日常开发记录',
         items: [
+          { text: 'CSS相关', link: '/daily/css/daily.md' },
           { text: 'JS相关', link: '/daily/js/utils.md' },
           { text: 'node相关', link: '/daily/node/pm2.md' }
         ]
@@ -69,6 +70,14 @@ module.exports = {
           children: [
             ['/daily/node/git-webhooks.md', 'Github配置WebHooks'],
             ['/daily/node/pm2.md', 'pm2常用命令集合']
+          ]
+        }
+      ],
+      '/daily/css/': [
+        {
+          title: 'css相关',
+          children: [
+            ['/daily/css/daily.md', '日常css合集']
           ]
         }
       ],
@@ -170,7 +179,8 @@ module.exports = {
                 ['/framework/Vue/2.x/vue.md', 'Vue2原理'],
                 ['/framework/Vue/2.x/vue-vdom.md', '虚拟Dom'],
                 ['/framework/Vue/2.x/vue-observe.md', 'Vue2响应式原理'],
-                ['/framework/Vue/2.x/vue-router.md', 'VueRouer原理']
+                ['/framework/Vue/2.x/vue-nextTick.md', 'Vue.nextTick原理'],
+                ['/framework/Vue/2.x/vue-router.md', 'VueRouer原理'],
               ]
             },
             {
