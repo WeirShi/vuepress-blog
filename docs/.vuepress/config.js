@@ -21,6 +21,13 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       {
+        text: '计算机基础',
+        items: [
+          { text: '随记', link: '/internate/base/hash-table.md' },
+          { text: '网络', link: '/internate/network/http.md' }
+        ]
+      },
+      {
         text: '日常开发记录',
         items: [
           { text: 'CSS相关', link: '/daily/css/daily.md' },
@@ -44,7 +51,7 @@ module.exports = {
         items: [
           // {text: 'JQuery', link: ''},
           {text: 'Vue', link: '/framework/Vue/2.x/vue.md'},
-          {text: 'React', link: '/framework/React/lifecircle.md'},
+          {text: 'React', link: '/framework/React/preposition.md'},
           {text: 'Webpack', link: '/framework/Webpack/webpack.md'}
         ]
       },
@@ -54,6 +61,22 @@ module.exports = {
     ],
     // 侧边栏
     sidebar: {
+      '/internate/base/': [
+        {
+          title: '随机',
+          children: [
+            ['/internate/base/hash-table.md', '哈希表'],
+          ]
+        }
+      ],
+      '/internate/network/': [
+        {
+          title: '网络相关',
+          children: [
+            ['/internate/network/http.md', 'http请求'],
+          ]
+        }
+      ],
       '/daily/js/': [
         {
           title: 'JS相关',
