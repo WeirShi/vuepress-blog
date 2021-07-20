@@ -63,7 +63,7 @@ module.exports = {
     sidebar: {
       '/internate/base/': [
         {
-          title: '随机',
+          title: '随记',
           children: [
             ['/internate/base/hash-table.md', '哈希表'],
           ]
@@ -222,7 +222,7 @@ module.exports = {
           children: [
             // ['/framework/React/lifecircle.md', 'React生命周期'],
             ['/framework/React/preposition.md', 'React基础内容'],
-            // ['/framework/React/hooks.md', 'React-Hooks'],
+            ['/framework/React/hooks.md', 'React Hooks'],
           ]
         }
       ],
