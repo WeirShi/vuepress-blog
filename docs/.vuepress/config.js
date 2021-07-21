@@ -180,6 +180,7 @@ module.exports = {
             ['/interview/url.md', '用户输入url后，浏览器发生了什么？'],
             ['/interview/promise.md', 'Promise'],
             ['/interview/event-loop.md', 'EventLoop'],
+            ['/interview/performance.md', '前端性能优化'],
             // ['/interview/spa.md', 'SPA单页应用原理'],
           ]
         }
