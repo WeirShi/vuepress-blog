@@ -31,7 +31,7 @@ function HashTable() {
     map.set(key, value)
   }
 
-  // 删除关键字, 如果哈希表中包含key，并且delete返回true则删除，并使得size减1
+  // 删除关键字, 如果哈希表中包含key，并且delete返回true则删除
   this.remove = function (key) {
     return map.delete(key)
   }
