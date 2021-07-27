@@ -21,7 +21,7 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       {
-        text: '计算机基础',
+        text: '基础',
         items: [
           { text: '随记', link: '/internate/base/hash-table.md' },
           { text: '网络', link: '/internate/network/http.md' }
@@ -47,7 +47,7 @@ module.exports = {
         ]
       },
       {
-        text: '框架源码解读',
+        text: '框架工具',
         items: [
           // {text: 'JQuery', link: ''},
           {text: 'Vue', link: '/framework/Vue/2.x/vue.md'},
@@ -223,6 +223,7 @@ module.exports = {
           children: [
             // ['/framework/React/lifecircle.md', 'React生命周期'],
             ['/framework/React/preposition.md', 'React基础内容'],
+            ['/framework/React/hoc.md', 'React 高阶组件'],
             ['/framework/React/hooks.md', 'React Hooks'],
           ]
         }
@@ -231,7 +232,8 @@ module.exports = {
         {
           title: 'Webpack',
           children: [
-            ['/framework/Webpack/webpack.md', 'Webpack基础内容']
+            ['/framework/Webpack/webpack.md', 'Webpack基础内容'],
+            ['/framework/Webpack/performance.md', 'Webpack性能调优']
           ]
         }
       ]
