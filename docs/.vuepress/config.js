@@ -63,7 +63,6 @@ module.exports = {
           title: '随笔',
           children: [
             ['/internate/base/interview.md', '面经'],
-            
           ]
         }
       ],
