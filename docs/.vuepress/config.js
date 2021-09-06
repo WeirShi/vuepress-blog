@@ -21,15 +21,12 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       {
-        text: '基础',
-        items: [
-          { text: '随记', link: '/internate/base/hash-table.md' },
-          { text: '网络', link: '/internate/network/http.md' }
-        ]
+        text: '随笔', link: '/internate/base/interview.md'
       },
       {
         text: '日常开发记录',
         items: [
+          { text: '随记', link: '/internate/network/http.md' },
           { text: 'CSS相关', link: '/daily/css/daily.md' },
           { text: 'JS相关', link: '/daily/js/utils.md' },
           { text: 'node相关', link: '/daily/node/pm2.md' }
@@ -63,16 +60,18 @@ module.exports = {
     sidebar: {
       '/internate/base/': [
         {
-          title: '随记',
+          title: '随笔',
           children: [
-            ['/internate/base/hash-table.md', '哈希表'],
+            ['/internate/base/interview.md', '面经'],
+            
           ]
         }
       ],
       '/internate/network/': [
         {
-          title: '网络相关',
+          title: '基础随记',
           children: [
+            ['/internate/network/hash-table.md', '哈希表'],
             ['/internate/network/http.md', 'http请求'],
           ]
         }
