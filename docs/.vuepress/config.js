@@ -63,6 +63,8 @@ module.exports = {
           title: '随笔',
           children: [
             ['/internate/base/interview.md', '面经'],
+            ['/internate/base/work.md', '工作法'],
+            // ['/internate/base/okr.md', 'OKR'],
           ]
         }
       ],
@@ -120,6 +122,7 @@ module.exports = {
             ['/base/curry.md', '函数柯里化'],
             ['/base/eventloop.md', 'EventLoop事件循环机制'],
             ['/base/jsbridge.md', 'JsBridge'],
+            ['/base/jockey.md', 'JsBridge - jockey'],
             ['/base/es6.md', 'ES6的新特性'],
           ]
         }
